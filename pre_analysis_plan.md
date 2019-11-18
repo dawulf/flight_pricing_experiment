@@ -19,27 +19,6 @@ The primary outcome variable will be the percentage (relative) change in price o
 ##Secondary outcome variable
 A second variable to be calculated will be the absolute change instead of the relative change in price. This variable will be run through the same analysis as the primary outcome, but will not be used to claim a causal effect. Instead, it may provide a helpful general guideline for the scale in dollars of any effects found in the primary outcome.
 
-##Variable Definitions
-
-\begin{tabular}{| l | p{5in} |}
-\hline
-Variable & Definition \\
-\hline
-origin & Airport of origin \\
-destination & Airport of destination \\
-date & Either February 12th or February 19th \\
-website & The website on which prices will be checked, coded as a categorical, one of "United","Delta","American","Expedia","Booking", and "TripAdvisor" \\
-airline\_site & Indicator of whether the website used is an airline site. Calculated as (website \%in\% c("United","Delta","American")) \\
-treatment & Indicator for exposure to repeated price checking treatment \\
-c\_type & 0, 1, or 2. 0: Equivalent to Treatment=1. 1: Control, with initial price check by non-experimenter. 2: Control, with initial price check by experimenter using the Google incognito browser \\
-flight\_id & Unique flight identifier, including airline and flight number, such as "UA548" \\ 
-price\_pre & Price of the flight recorded on initial check. Price used will be in basic economy or its equivalent class \\
-price\_post & Price of the flight recorded on final check, also in basic economy or its equivalent class \\
-price\_rel & Primary outcome. Percentage change in price from initial to final checks, calculated as (100*price\_post/price\_pre) \\
-price\_abs & Secondary outcome. Absolute change in price from initial to final checks, calculated as (price\_post - price\_pre) \\
-\hline
-\end{tabular}
-
 A balance table will be produced showing the average price\_pre in the treatment and control group, as well as within each of the 6 website groups.
 
 ##Inclusion/Exclusion Criteria
